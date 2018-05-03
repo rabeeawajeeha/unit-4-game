@@ -1,0 +1,13 @@
+.jumbotron {
+    margin-bottom: 0px;
+    background-color: black !important;
+  }
+  .text-center{
+      color: white;
+      font-family: 'Shadows Into Light Two', cursive; 
+  }
+  
+  body {
+      font-family: 'Shadows Into Light Two', cursive;
+      background: url("../images/background.jpg");
+  }

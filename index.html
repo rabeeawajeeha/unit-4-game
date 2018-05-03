@@ -1,22 +1,111 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <title>CRYSTALS COLLECTOR</title>
+    <!-- Added link to the jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+       <!-- Added a link to Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet">
+</head>
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
+<body>
+    <!--title-->
+    <div class="jumbotron">
+        <h1 class="text-center">CRYSTALS COLLECTOR</h1>
+        <h3 class="text-center">Create the correct combination of gems to match the number shown</h3>
+    </div>
+    <div class="container">
+        <div class="row">
+            <!--Rules-->
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Rules</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul>
+                            <li>You will be given a random number at the start of the game.</li>
+                            <li>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</li>
+                            <li>You win the game by matching your total score to the random number, you lose the game if your total score goes above the random number.</li>
+                            <li>The value of each crystal is hidden from you until you click on it.</li>
+                            <li>Each time when the game starts, the game will change the values of each crystal.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Result Panel -->
+            <div class="col-lg-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Crystals</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-3">
+                                    <div class="thumbnail">
+                                        <img id="white" src="assets/images/whitecrystal.jpg" alt="white">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <div class="thumbnail">
+                                        <img id="green" src="assets/images/greencrystal.jpg" alt="green">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <div class="thumbnail">
+                                        <img id="purple" src="assets/images/purplecrystal.jpg" alt="purple">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <div class="thumbnail">
+                                        <img id="blue" src="assets/images/bluecrystal.jpg" alt="blue">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="panel panel-default">
+                    <div id=total class="panel-heading">
+                        <h3 class="panel-title">Your Number</h3>
+                    </div>
+                    <div class="panel-body">
+                        <h1 id="totalNum"></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Number To Match</h3>
+                    </div>
+                    <div class="panel-body">
+                        <h1 id="numToGuess"></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Score</h3>
+                    </div>
+                    <div class="panel-body">
+                        <h5>Wins: <span id="wins"></span></h5>
+                        <h5>Losses: <span id="losses"></span></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="assets/javascript/game.js"></script>
+        </script>
+</body>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-  </body>
 </html>
